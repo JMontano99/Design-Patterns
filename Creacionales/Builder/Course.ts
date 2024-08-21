@@ -11,6 +11,7 @@ export class Course {
     private students: IStudent[] | null;
     private startDate: Date | null;
     private endDate: Date | null;
+    
 
     constructor(
         name: string,
@@ -30,6 +31,10 @@ export class Course {
         this.students = students || []; // Lista vacía por defecto
         this.startDate = startDate || new Date(); // Valor por defecto
         this.endDate = endDate || new Date(); // Valor por defecto
+    }
+
+    public addExtraBehaviour(cadena: string):void{
+        //Funcionalidad desde el exterior 
     }
 
     public displayCourseInfo(): void {

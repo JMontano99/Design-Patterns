@@ -5,12 +5,15 @@ import { CourseBuilder } from './CourseBuilder'
 
 
 const basicCourse = new CourseBuilder().SetName('Introduccion a typescript 2')
-.setInstructor({name:'Alice', email: 'alice@gmail.com', experience: 5}).buildCourse();
+.setInstructor({name:'Alice', email: 'alice@gmail.com', experience: 5})
+.setCustomMethod((message:string)=>{console.log('Se agrego nueva funcionalidad '+message)})
+.buildCourse();
 
 
 console.log('Curso 1:');
 basicCourse.displayCourseInfo();
 console.log('*****************************************');
+basicCourse.addExtraBehaviour('Extra mensaje: Este curso es sabatino');
 
 // Creación de un curso completo con todos los detalles
 /*const advancedCourse = new Course(
